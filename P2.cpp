@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int gcd(int a, int b){
+	if (b == 0) return a;
+	else return gcd(b, a%b);
+}
+
+int lcm(int a, int b){
+	return (a*b) / gcd(a, b);
+}
+
+
+int main(){
+	int a, b;
+	cout << "Nhap so thu nhat: ";
+	cin >> a;
+	cout << "Nhap so thu hai: ";
+	cin >> b;
+	cout << "USCLN cua 2 so la: " << gcd(a, b) << endl;
+	cout << "BSCNN cua 2 so la: " << lcm(a, b) << endl;
+}
